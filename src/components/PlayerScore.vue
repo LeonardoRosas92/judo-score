@@ -47,11 +47,12 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .pad-bottom-overlay,.pad-top-overlay {
     display: none;
 }
 .scroll-picker-container{
     height: 50px;
 }
+
 </style>
