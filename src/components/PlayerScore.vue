@@ -6,15 +6,15 @@
     <div class="flex justify-evenly">
       <div>
         <p class="text-2xl">Ippon</p>
-        <ScrollPicker :options="options" v-model="ScoreIppon" />
+        <ScrollPicker :options="optionsIppon" v-model="ScoreIppon" />
       </div>
       <div>
         <p class="text-2xl">Wazari</p>
-        <ScrollPicker :options="options" v-model="ScoreWazari" />
+        <ScrollPicker :options="optionsWazari" v-model="ScoreWazari" />
       </div>
       <div>
         <p class="text-2xl">Shido</p>
-        <ScrollPicker :options="options" v-model="ScorePenalty" />
+        <ScrollPicker :options="optionsPenalti" v-model="ScorePenalty" />
       </div>
     </div>
   </div>
@@ -33,7 +33,9 @@ export default {
     },
     data(){
         return{
-            options : [[{label: "0",value: 0},{label: "1",value: 1}]],
+            optionsIppon : [[{label: "0",value: 0},{label: "1",value: 1}]],
+            optionsWazari : [[{label: "0",value: 0},{label: "1",value: 1},{label: "2",value: 2}]],
+            optionsPenalti : [[{label: "0",value: 0},{label: "1",value: 1},{label: "2",value: 2},{label: "3",value: 3}]],
             ScoreIppon: [],
             ScoreWazari: [],
             ScorePenalty: [],
