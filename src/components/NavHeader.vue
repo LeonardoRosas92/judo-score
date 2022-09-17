@@ -1,9 +1,9 @@
 <template>
   <header class="w-full p-1">
     <div class="flex items-center justify-between">
-      <img src="../assets/Judogi.png" alt="Judo_Img" class="w-8 h-8 md:w-10 md:h-10">
-      <h1 class="p-2 text-2xl md:text-4xl">Judotecnia</h1>
-      <img src="../assets/Judogi.png" alt="Judo_Img" class="w-8 h-8 md:w-10 md:h-10">
+      <img src="../assets/Judogi.png" alt="Judo_Img" class="w-8 h-8 lg:w-10 lg:h-10">
+      <h1 class=" text-2xl lg:text-4xl lg:p-2 text-red-700">Judotecnia</h1>
+      <img src="../assets/Judogi.png" alt="Judo_Img" class="w-8 h-8 lg:w-10 lg:h-10">
     </div>
   </header>
 </template>
