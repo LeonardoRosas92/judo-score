@@ -1,5 +1,5 @@
 <template>
-  <main class="text-center flex flex-col items-center gap-y-0.5 lg:justify-evenly px-1 py-1">
+  <main class="text-center flex flex-col justify-evenly items-center gap-y-0.5 px-1 py-1">
     <div>
       <p class="text-2xl block font-bold lg:text-4xl xl:text-5xl">Puntuación</p>
     </div>
@@ -27,10 +27,10 @@
             </label>
         </div>
         </div>
-    <div class="w-full grid grid-cols-2 md:grid-cols-12 place-items-center gap-y-1 gap-x-1">
-        <TimerComponent title="Osaekomi" isOsaekomi class="col order-1 md:col-span-3 md:order-1"/>
-        <TimerComponent title="Tiempo" isTimer class="col-span-2 order-3 md:col-span-6 md:order-2 " @disableSelect="disableSelect"/>
-        <TimerComponent title="Osaekomi" isOsaekomi isAzul class="order-2 md:col-span-3 md:order-3"/>
+    <div class="w-full grid grid-cols-1 md:grid-cols-12 place-items-center gap-y-1 gap-x-1">
+        <TimerComponent title="Osaekomi" isOsaekomi class="order-1 md:col-span-3 md:order-1"/>
+        <TimerComponent title="Tiempo" isTimer class="order-2 md:col-span-6 md:order-2 " @disableSelect="disableSelect"/>
+        <TimerComponent title="Osaekomi" isOsaekomi isAzul class="order-3 md:col-span-3 md:order-3"/>
     </div>
   </main>
 </template>
