@@ -1,36 +1,36 @@
 <template>
-  <main class="text-center mx-auto flex flex-col gap-1 items-center justify-evenly lg:justify-evenly">
+  <main class="text-center flex flex-col items-center gap-y-0.5 lg:justify-evenly px-1 py-1">
     <div>
-      <p class="text-2xl block font-bold lg:text-5xl">Puntuación</p>
+      <p class="text-2xl block font-bold lg:text-4xl xl:text-5xl">Puntuación</p>
     </div>
-    <div class="w-full grid  justify-items-center gap-1 lg:gap-3 transition-[width] duration-150 ease-in-out grid-cols-1 md:grid-cols-2">
+    <div class="w-full grid  justify-items-center gap-1 grid-cols-1 md:grid-cols-2">
         <PlayerScore />
         <PlayerScore isAzul/>
     </div>
-    <div class="grid grid-cols-3">
-        <div class="form-check">
-            <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault1" v-model="seconds" value=120 checked :disabled=isDisable>
-            <label class="form-check-label inline-block text-gray-800 text-xs" for="flexRadioDefault1">
+    <div class="w-full flex justify-evenly">
+        <div class="form-check flex items-center">
+            <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault1" v-model="seconds" value=120 checked :disabled=isDisable>
+            <label class="form-check-label inline-block text-gray-800 text-md lg:text-2xl xl:text-3xl" for="flexRadioDefault1">
                 Infantil
             </label>
         </div>
-        <div class="form-check">
-            <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault2" v-model="seconds" value=180 :disabled=isDisable>
-            <label class="form-check-label inline-block text-gray-800 text-xs" for="flexRadioDefault2">
-                Juvenil
+        <div class="form-check flex items-center">
+            <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault2" v-model="seconds" value=180 :disabled=isDisable>
+            <label class="form-check-label inline-block text-gray-800 text-md lg:text-2xl xl:text-3xl" for="flexRadioDefault2">
+                Sub-15
             </label>
         </div>
-        <div class="form-check">
-            <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault2" v-model="seconds" value=240 :disabled=isDisable>
-            <label class="form-check-label inline-block text-gray-800 text-xs" for="flexRadioDefault2">
+        <div class="form-check flex items-center">
+            <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 bg-no-repeat bg-center bg-contain mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault2" v-model="seconds" value=240 :disabled=isDisable>
+            <label class="form-check-label inline-block text-gray-800 text-md lg:text-2xl xl:text-3xl" for="flexRadioDefault2">
                 Mayores
             </label>
         </div>
         </div>
-    <div class="w-full grid grid-cols-1 md:grid-cols-12 justify-items-center gap-1">
-        <TimerComponent title="Osaekomi" isOsaekomi class="col-span-3"/>
-        <TimerComponent title="Tiempo" isTimer class="col-span-6" @disableSelect="disableSelect"/>
-        <TimerComponent title="Osaekomi" isOsaekomi isAzul class="col-span-3"/>
+    <div class="w-full grid grid-cols-2 md:grid-cols-12 place-items-center gap-y-1 gap-x-1">
+        <TimerComponent title="Osaekomi" isOsaekomi class="col order-1 md:col-span-3 md:order-1"/>
+        <TimerComponent title="Tiempo" isTimer class="col-span-2 order-3 md:col-span-6 md:order-2 " @disableSelect="disableSelect"/>
+        <TimerComponent title="Osaekomi" isOsaekomi isAzul class="order-2 md:col-span-3 md:order-3"/>
     </div>
   </main>
 </template>
@@ -77,6 +77,18 @@ main {
     background-size: 130% 100%;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100%
+    height: calc(100% - 40px)
+}
+
+
+@media (min-width: 768px) {
+    main {
+        height: calc(100% - 60px)
+    }
+}
+@media (min-width: 768px) {
+    main {
+        height: calc(100% - 80px)
+    }
 }
 </style>

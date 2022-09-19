@@ -1,38 +1,32 @@
 <template>
   <div 
-    class="rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-80 border-2 border-black   w-11/12 py-1 font-bold drop-shadow-lg shadow-black " 
+    class="rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-80 border-2 border-black w-full py-1 md:py-0.5 font-bold drop-shadow-lg shadow-black " 
     :class="[isAzul ? 'bg-blue-900 text-white' : 'bg-white-900 text-blue-600']">
-    <h1 class="block text-2xl font-bold lg:text-5xl lg:mb-4">
+    <h1 class="block text-xl font-bold lg:text-4xl xl:text-5xl">
         Competidor <span v-if="isAzul">Azul</span><span v-if="!isAzul">Blanco</span>
     </h1>
-    <div class="flex justify-evenly lg:py-10">
+    <div class="flex justify-evenly py-1">
       <div>
-        <p class="text-lg lg:text-5xl lg:mb-5">Ippon</p>
+        <p class="text-xl lg:text-3xl xl:text-4xl">Ippon</p>
         <div class="contenedor">
             <ScrollPicker :options="optionsIppon" v-model="ScoreIppon" 
             class="score"
-            inactive-style="height: 50px;"
-            active-style="font-size:30px;"
         />
         </div>
       </div>
       <div>
-        <p class="text-lg lg:text-5xl lg:mb-5">Wazari</p>
+        <p class="text-xl lg:text-3xl xl:text-4xl">Wazari</p>
         <div class="contenedor">
             <ScrollPicker :options="optionsWazari" v-model="ScoreWazari" 
             class="score"
-            inactive-style="height: 50px;"
-            active-style="font-size:30px;"
             />
         </div>
       </div>
       <div>
-        <p class="text-lg lg:text-5xl lg:mb-5">Shido</p>
+        <p class="text-xl lg:text-3xl xl:text-4xl">Shido</p>
         <div class="contenedor">
             <ScrollPicker :options="optionsPenalti" v-model="ScoreShido" 
             class="score"
-            inactive-style="height: 50px;"
-            active-style="font-size:30px;"
             />
         </div>
       </div>
@@ -117,21 +111,41 @@ export default {
         position: absolute;
         top: -55px;
     }
+    .row-option-custom{
+        font-size:40px;
+    }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
     .active-row-option{
-        font-size: 50px !important;
+        font-size: 70px !important;
     }
     .contenedor{
         height: 60px;
         .score{
             position: absolute;
-            top: -55px;
+            top: -45px;
+        }
+        .row-option-custom{
+            font-size:50px;
         }
     }
 }
 
-
+@media (min-width: 1024px) {
+    .active-row-option{
+        font-size: 90px !important;
+    }
+    .contenedor{
+        height: 80px;
+        .score{
+            position: absolute;
+            top: -35px;
+        }
+        .row-option-custom{
+            font-size:60px;
+        }
+    }
+}
 
 </style>

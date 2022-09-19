@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen bg-gray-400">
+  <div class="h-screen w-screen bg-gray-400">
     <NavBar />
     <MainContent />
   </div>
