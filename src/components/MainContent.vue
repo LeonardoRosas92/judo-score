@@ -88,12 +88,12 @@ main {
 }
 @media (min-width: 768px) {
     main {
-        height: calc(100% - 80px)
+        height: calc(100% - 60px)
     }
 }
-@media (min-width: 1250px) {
+@media (min-width: 1024px) {
     main {
-        height: calc(100% - 90px)
+        height: calc(100% - 70px)
     }
 }
 </style>
