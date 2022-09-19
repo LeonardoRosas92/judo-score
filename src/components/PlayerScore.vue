@@ -90,6 +90,16 @@ export default {
             if (!this.isAzul) {
                 this.ScoreWazari[0] = wazari
             }
+        },
+        GET_SHIDO_AZUL(shido){
+            if(this.isAzul){
+                this.ScoreShido[0] = shido
+            }
+        },
+        GET_SHIDO_BLANCO(shido){
+            if(!this.isAzul){
+                this.ScoreShido[0] = shido
+            }
         }
     }
 };

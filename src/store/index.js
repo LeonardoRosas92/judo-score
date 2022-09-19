@@ -18,9 +18,23 @@ export default createStore({
     OsaekomiAzul: 20,
     OsaekomiAzulPlay: false,
     OsaekomiBlanco: 20,
-    OsaekomiBlancoPlay: false
+    OsaekomiBlancoPlay: false,
+    Golden_Score: false
   },
   getters: {
+    GET_WINNER(state){
+      const Azul = (state.Azul.ippon*10) + state.Azul.wazari;
+      const Blanco = (state.Blanco.ippon*10) + state.Blanco.wazari;
+      if (Azul > Blanco) {
+        return 'Azul'
+      }else if (Azul < Blanco) {
+        return 'Blanco'
+      }
+      return null;
+    },
+    GET_GOLDEN_SCORE(state){
+      return state.Golden_Score;
+    },
     GET_IPPON_AZUL(state){
       return state.Azul.ippon
     },
@@ -62,6 +76,9 @@ export default createStore({
     }
   },
   mutations: {
+    SET_GOLDEN_SCORE(state){
+      state.Golden_Score = !state.Golden_Score
+    },
     SET_IPPON_AZUL(state, ippon){
       state.Azul.ippon = ippon
     },
@@ -75,6 +92,7 @@ export default createStore({
     },
     SET_SHIDO_AZUL(state, shido){
       state.Azul.shido = shido
+      shido === 3 ? state.Blanco.ippon = 1 : state.Blanco.ippon = 0
     },
     SET_IPPON_BLANCO(state, ippon){
       state.Blanco.ippon = ippon
@@ -89,6 +107,7 @@ export default createStore({
     },
     SET_SHIDO_BLANCO(state, shido){
       state.Blanco.shido = shido
+      shido === 3 ? state.Azul.ippon = 1 : state.Azul.ippon = 0
     },
     SET_TIMER(state, segundos){
       state.Tiempo = segundos
@@ -140,6 +159,7 @@ export default createStore({
       state.OsaekomiAzulPlay = false;
       state.OsaekomiBlancoPlay = false;
       state.TiempoPlay = false;
+      state.Golden_Score = false;
     },
     DECREMENT_OZAEKOMI_AZUL(state){
       state.OsaekomiAzul--;
@@ -149,6 +169,9 @@ export default createStore({
     }
   },
   actions: {
+    setGoldenScore({commit}){
+      commit('SET_GOLDEN_SCORE')
+    },
     setIpponAzul({commit}, ippon){
       commit('SET_IPPON_AZUL', ippon)
     },
