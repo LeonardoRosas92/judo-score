@@ -2,7 +2,7 @@
   <div 
     class="rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-80 border-2 border-black w-full py-1 md:py-0.5 font-bold drop-shadow-lg shadow-black " 
     :class="[isAzul ? 'bg-blue-900 text-white' : 'bg-white-900 text-blue-600']">
-    <h1 class="block text-xl font-bold lg:text-4xl xl:text-5xl 2xl:text-6xl">
+    <h1 class="block text-xl font-bold lg:text-4xl xl:text-5xl 2xl:text-5xl">
         Competidor <span v-if="isAzul">Azul</span><span v-if="!isAzul">Blanco</span>
     </h1>
     <div class="flex justify-evenly py-1">

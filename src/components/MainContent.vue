@@ -1,7 +1,7 @@
 <template>
   <main class="text-center flex flex-col justify-evenly items-center gap-y-0.5 px-1 py-1">
     <div>
-      <p class="text-2xl block font-bold lg:text-4xl xl:text-5xl  2xl:text-7xl">Puntuación</p>
+      <p class="text-2xl block font-bold lg:text-4xl xl:text-5xl  2xl:text-6xl">Puntuación</p>
     </div>
     <div class="w-full grid  justify-items-center gap-1 grid-cols-1 md:grid-cols-2">
         <PlayerScore />
@@ -93,7 +93,7 @@ main {
 }
 @media (min-width: 1250px) {
     main {
-        height: calc(100% - 105px)
+        height: calc(100% - 90px)
     }
 }
 </style>

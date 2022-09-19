@@ -2,12 +2,12 @@
   <div 
   class="rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-70 border-2 border-black w-full flex flex-col justify-center lg:py-2" 
   :class="[isAzul ? 'bg-blue-900 text-white' : 'bg-white-900 text-blue-600']">
-    <h1 :class="[isOsaekomi ? 'text-xl lg:text-3xl xl:text-5xl 2xl:text-7xl':'text-3xl lg:text-6xl xl:text-7xl 2xl:text-9xl']">
+    <h1 :class="[isOsaekomi ? 'text-xl lg:text-3xl xl:text-5xl 2xl:text-7xl':'text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl']">
         {{title}}
         <span v-if="!isOsaekomi && GET_GOLDEN_SCORE" class="animate-pulse text-amber-400">G.S</span>
     </h1>
     <div class="flex flex-row-reverse justify-center gap-x-2">
-        <h2 v-if="isOsaekomi" :class="[isOsaekomi ? 'text-3xl lg:text-5xl 2xl:text-8xl':'']">{{formatOsaekomi}}</h2>
+        <h2 v-if="isOsaekomi" :class="[isOsaekomi ? 'text-3xl lg:text-5xl 2xl:text-7xl':'']">{{formatOsaekomi}}</h2>
         <h2 v-else class="text-6xl lg:text-8xl xl:text-8xl font-bold">{{formatTime}}</h2>
         <div v-if="showButtons" class="flex items-center">
             <button v-if="showPlay" class="flex justify-center items-center p-1" @click="play">
