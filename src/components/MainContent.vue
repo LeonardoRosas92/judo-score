@@ -1,8 +1,5 @@
 <template>
-  <main class="text-center flex flex-col justify-evenly items-center gap-y-0.5 px-1 py-1">
-    <div>
-      <p class="text-2xl block font-bold lg:text-4xl xl:text-5xl  2xl:text-6xl">Puntuación</p>
-    </div>
+  <main class="text-center flex flex-col justify-evenly items-center gap-y-0.5 px-1 py-1 bg-white">
     <div class="w-full grid  justify-items-center gap-1 grid-cols-1 md:grid-cols-2">
         <PlayerScore />
         <PlayerScore isAzul/>
@@ -72,28 +69,28 @@ export default {
 
 <style lang="scss">
 main {
+    position: relative;
     background-image: url("../assets/Judo.webp");
-    background-size: cover;
-    background-size: 130% 100%;
+    background-color: #fff;
+    background-size: 100% 90%;
     background-position: center;
     background-repeat: no-repeat;
-    height: calc(100% - 40px)
+    height: calc(100% - 40px);
 }
-
 
 @media (min-width: 768px) {
     main {
-        height: calc(100% - 60px)
+        height: calc(100% - 60px);
     }
 }
 @media (min-width: 768px) {
     main {
-        height: calc(100% - 60px)
+        height: calc(100% - 60px);
     }
 }
 @media (min-width: 1024px) {
     main {
-        height: calc(100% - 70px)
+        height: calc(100% - 70px);
     }
 }
 </style>

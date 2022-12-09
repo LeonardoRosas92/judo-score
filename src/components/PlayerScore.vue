@@ -1,13 +1,13 @@
 <template>
   <div 
-    class="rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-80 border-2 border-black w-full py-1 md:py-0.5 font-bold drop-shadow-lg shadow-black " 
-    :class="[isAzul ? 'bg-blue-900 text-white' : 'bg-white-900 text-blue-600']">
-    <h1 class="block text-xl font-bold lg:text-4xl xl:text-5xl 2xl:text-6xl">
+    class="rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60 border-2 border-black w-full py-1 md:py-0.5 font-bold drop-shadow-lg shadow-black " 
+    :class="[isAzul ? 'bg-blue-900 text-white' : 'bg-white text-blue-600']">
+    <h1 class="block text-xl font-bold lg:text-4xl xl:text-6xl 2xl:text-6xl ">
         Competidor <span v-if="isAzul">Azul</span><span v-if="!isAzul">Blanco</span>
     </h1>
     <div class="flex justify-evenly py-1">
       <div>
-        <p class="text-xl lg:text-3xl xl:text-4xl 2xl:text-7xl">Ippon</p>
+        <p class="text-xl lg:text-3xl xl:text-5xl 2xl:text-7xl tracking-wide">Ippon</p>
         <div class="contenedor">
             <ScrollPicker :options="optionsIppon" v-model="ScoreIppon" 
             class="score"
@@ -15,7 +15,7 @@
         </div>
       </div>
       <div>
-        <p class="text-xl lg:text-3xl xl:text-4xl 2xl:text-7xl">Wazari</p>
+        <p class="text-xl lg:text-3xl xl:text-5xl 2xl:text-7xl tracking-wide">Wazari</p>
         <div class="contenedor">
             <ScrollPicker :options="optionsWazari" v-model="ScoreWazari" 
             class="score"
@@ -23,7 +23,7 @@
         </div>
       </div>
       <div>
-        <p class="text-xl lg:text-3xl xl:text-4xl 2xl:text-7xl">Shido</p>
+        <p class="text-xl lg:text-3xl xl:text-5xl 2xl:text-7xl tracking-wide">Shido</p>
         <div class="contenedor">
             <ScrollPicker :options="optionsPenalti" v-model="ScoreShido" 
             class="score"

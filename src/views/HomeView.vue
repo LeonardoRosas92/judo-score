@@ -7,7 +7,6 @@
       </button>
       <NavBar />
       <MainContent />
-      
     </div>
   </fullscreen>
 </template>
