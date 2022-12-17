@@ -2,22 +2,22 @@
   <div 
   class="rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-70 border-2 border-black w-full flex flex-col justify-center lg:py-2" 
   :class="[isAzul ? 'bg-blue-900 text-white' : 'bg-white text-blue-600']">
-    <h1 :class="[isOsaekomi ? 'text-xl lg:text-3xl xl:text-5xl 2xl:text-7xl':'text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl tracking-wide text-black']">
+    <h1 :class="[isOsaekomi ? 'text-xl lg:text-3xl xl:text-7xl 2xl:text-7xl':'text-3xl lg:text-6xl xl:text-8xl 2xl:text-8xl tracking-wide text-black']">
         {{title}}
         <span v-if="!isOsaekomi && GET_GOLDEN_SCORE" class="animate-pulse text-amber-400">G.S</span>
     </h1>
     <div class="flex flex-row-reverse justify-center gap-x-2">
-        <h2 v-if="isOsaekomi" :class="[isOsaekomi ? 'text-3xl lg:text-5xl 2xl:text-7xl':'']">{{formatOsaekomi}}</h2>
-        <h2 v-else class="text-6xl lg:text-8xl xl:text-8xl font-bold text-black">{{formatTime}}</h2>
+        <h2 v-if="isOsaekomi" :class="[isOsaekomi ? 'text-3xl lg:text-5xl xl:text-8xl 2xl:text-7xl':'']">{{formatOsaekomi}}</h2>
+        <h2 v-else class="text-6xl lg:text-8xl xl:text-9xl font-bold text-black">{{formatTime}}</h2>
         <div v-if="showButtons" class="flex items-center">
             <button v-if="showPlay" class="flex justify-center items-center p-1" @click="play">
-                <span class="material-icons" :class="[isOsaekomi ? '2xl:text-4xl' : 'text-4xl lg:text-5xl 2xl:text-7xl text-black']" >play_circle</span>
+                <span class="material-icons" :class="[isOsaekomi ? '2xl:text-4xl' : 'text-4xl lg:text-5xl xl:text-6xl before:2xl:text-7xl text-black']" >play_circle</span>
             </button>
             <button v-if="showPause" class="flex justify-center items-center p-1" @click="pause">
-                <span class="material-icons" :class="[isOsaekomi ? '2xl:text-4xl' : 'text-4xl lg:text-5xl 2xl:text-7xl text-black']">pause_circle</span>
+                <span class="material-icons" :class="[isOsaekomi ? '2xl:text-4xl' : 'text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-black']">pause_circle</span>
             </button>
             <button v-if="showRestart" class="flex justify-center items-center p-1" @click="restart">
-                <span class="material-icons" :class="[isOsaekomi ? '2xl:text-4xl' : 'text-4xl lg:text-5xl 2xl:text-7xl text-black']">replay_circle_filled</span>
+                <span class="material-icons" :class="[isOsaekomi ? '2xl:text-4xl' : 'text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-black']">replay_circle_filled</span>
             </button>
         </div>
     </div>
