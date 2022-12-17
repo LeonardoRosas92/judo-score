@@ -6,7 +6,7 @@
     </div>
     <div class="w-full flex justify-evenly">
         <div class="form-check flex items-center">
-            <input class="form-check-input appearance-none rounded-full h-4 w-4 2xl:h-6 2xl:w-6 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault1" v-model="seconds" value=120 checked :disabled=isDisable>
+            <input class="form-check-input appearance-none rounded-full h-4 w-4 2xl:h-6 2xl:w-6 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault1" v-model="seconds" value=10 checked :disabled=isDisable>
             <label class="form-check-label inline-block text-gray-800 text-md lg:text-2xl xl:text-3xl 2xl:text-5xl" for="flexRadioDefault1">
                 Infantil
             </label>
@@ -40,7 +40,7 @@ export default {
     components: {PlayerScore,TimerComponent},
     data(){
         return{
-            seconds: 120,
+            seconds: 10,
             isDisable: false,
             winnerAzul: false,
             winnerBlanco: false,

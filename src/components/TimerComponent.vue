@@ -96,7 +96,9 @@ export default {
                     }
                     
                 }else{
-                    if ((this.GET_GOLDEN_SCORE && this.GET_WAZARI_AZUL === 1) || (this.GET_GOLDEN_SCORE && this.GET_WAZARI_BLANCO === 1)) {
+                    //if ((this.GET_GOLDEN_SCORE && this.GET_WAZARI_AZUL === 1) || (this.GET_GOLDEN_SCORE && this.GET_WAZARI_BLANCO === 1)) {
+                    if (this.GET_GOLDEN_SCORE && this.GET_WINNER) {
+                        console.log('Entra');
                         this.setTiempoPlay(); // FALSE
                         this.showPlay = false;
                         this.showPause = false;
